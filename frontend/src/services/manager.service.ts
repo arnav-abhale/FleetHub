@@ -106,3 +106,29 @@ export const deleteDriverApi = async (id: string) => {
   const res = await api.delete(`/manager/drivers/${id}`);
   return res.data;
 };
+
+export const getFleetIntelligence = async () => {
+  const res = await api.get('/manager/driver-intelligence');
+  return res.data;
+};
+
+export const getDriverIntelligence = async (driverId: string) => {
+  const res = await api.get(`/manager/drivers/${driverId}/intelligence`);
+  return res.data;
+};
+
+export const recommendDrivers = async (payload: {
+  requestId?: string;
+  pickupAddress: string;
+  dropAddress: string;
+  packageCategory?: string;
+  weightKg?: number;
+  handleWithCare?: boolean;
+  priority?: string;
+  distanceKm?: number;
+  estimatedCost?: number;
+}) => {
+  const res = await api.post('/manager/recommend-drivers', payload);
+  return res.data;
+};
+

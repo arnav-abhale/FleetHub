@@ -4,6 +4,7 @@ import * as concernService from '../services/concern.service.js';
 import * as tripService from '../services/trip.service.js';
 import * as performanceService from '../services/performance.service.js';
 import * as driverService from '../services/driver.service.js';
+import * as mlService from '../services/ml.service.js';
 
 export const getDeliveryRequests = async (req, res, next) => {
   try {
@@ -186,10 +187,62 @@ export const getDriverPerformance = async (req, res, next) => {
 export const getAiRecommendations = async (req, res, next) => {
   try {
     const { requestId } = req.query;
+    if (requestId) {
+      // Find request details to run dynamic recommendation
+      const request = await requestService.getManagerDeliveryRequestById(requestId).catch(() => null);
+      if (request) {
+        const mlRecs = await mlService.getDriverRecommendations(request);
+        return res.status(200).json({
+          success: true,
+          message: 'Dynamic ML driver recommendations generated successfully',
+          data: mlRecs,
+        });
+      }
+    }
     const recommendations = await performanceService.getManagerAiRecommendations(requestId);
     return res.status(200).json({
       success: true,
       message: 'AI recommendations fetched successfully',
+      data: recommendations,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getFleetIntelligence = async (req, res, next) => {
+  try {
+    const intelligence = await mlService.getFleetIntelligence();
+    return res.status(200).json({
+      success: true,
+      message: 'Fleet driver intelligence fetched successfully',
+      data: intelligence,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getDriverIntelligence = async (req, res, next) => {
+  try {
+    const { driverId } = req.params;
+    const profile = await mlService.getDriverIntelligenceProfile(driverId);
+    return res.status(200).json({
+      success: true,
+      message: 'Driver intelligence profile fetched successfully',
+      data: profile,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const recommendDrivers = async (req, res, next) => {
+  try {
+    const recommendations = await mlService.getDriverRecommendations(req.body);
+    return res.status(200).json({
+      success: true,
+      message: 'Intelligent driver recommendations generated successfully',
       data: recommendations,
     });
   } catch (error) {

@@ -15,9 +15,22 @@ services:
       - "5000:5000"
     environment:
       DATABASE_URL: postgresql://postgres:postgres@db:5432/fleethub
+      ML_SERVICE_URL: http://ml_service:8000
     depends_on:
       db:
         condition: service_healthy
+      ml_service:
+        condition: service_started
+
+  ml_service:
+    build:
+      context: ./ml_service
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+      HOST: "0.0.0.0"
+
 
   db:
     image: postgres:16-alpine

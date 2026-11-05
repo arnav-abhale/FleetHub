@@ -1,0 +1,253 @@
+{
+  "drivers": [
+    {
+      "id": "d0000000-0000-0000-0000-000000000001",
+      "name": "Rahul Sharma",
+      "employee_code": "FL-EMP-0231",
+      "phone": "+91 98765 43210",
+      "city": "Mumbai",
+      "status": "available",
+      "score": 97.4,
+      "rating": 4.92,
+      "total_trips_completed": 5,
+      "vehicle": {
+        "id": "02000000-0000-0000-0000-000000000001",
+        "make_model": "Tata Ace Gold EV",
+        "registration_number": "MH12 KJ 4410",
+        "capacity_kg": 750.0
+      },
+      "trips": [
+        {
+          "trip_code": "TRP-8401",
+          "distance_km": 142.0,
+          "duration_minutes": 210,
+          "driving_score": 98.0,
+          "harsh_braking_events": 0,
+          "rapid_acceleration_events": 0,
+          "speeding_events": 0,
+          "sharp_cornering_events": 1,
+          "has_incident": false,
+          "handle_with_care": true,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 17.8
+        },
+        {
+          "trip_code": "TRP-8402",
+          "distance_km": 88.5,
+          "duration_minutes": 135,
+          "driving_score": 96.0,
+          "harsh_braking_events": 1,
+          "rapid_acceleration_events": 0,
+          "speeding_events": 0,
+          "sharp_cornering_events": 0,
+          "has_incident": false,
+          "handle_with_care": true,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 16.9
+        },
+        {
+          "trip_code": "TRP-8403",
+          "distance_km": 34.0,
+          "duration_minutes": 55,
+          "driving_score": 95.0,
+          "harsh_braking_events": 0,
+          "rapid_acceleration_events": 1,
+          "speeding_events": 0,
+          "sharp_cornering_events": 0,
+          "has_incident": false,
+          "handle_with_care": false,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 17.2
+        },
+        {
+          "trip_code": "TRP-9714",
+          "distance_km": 95.0,
+          "duration_minutes": 120,
+          "driving_score": 99.0,
+          "harsh_braking_events": 0,
+          "rapid_acceleration_events": 0,
+          "speeding_events": 0,
+          "sharp_cornering_events": 0,
+          "has_incident": false,
+          "handle_with_care": true,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 18.2
+        },
+        {
+          "trip_code": "TRP-9199",
+          "distance_km": 95.0,
+          "duration_minutes": 120,
+          "driving_score": 99.0,
+          "harsh_braking_events": 0,
+          "rapid_acceleration_events": 0,
+          "speeding_events": 0,
+          "sharp_cornering_events": 0,
+          "has_incident": false,
+          "handle_with_care": true,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 18.2
+        }
+      ]
+    },
+    {
+      "id": "d0000000-0000-0000-0000-000000000002",
+      "name": "Vikram Patil",
+      "employee_code": "FL-EMP-0232",
+      "phone": "+91 98765 43211",
+      "city": "Mumbai",
+      "status": "available",
+      "score": 91.0,
+      "rating": 4.78,
+      "total_trips_completed": 365,
+      "vehicle": {
+        "id": "02000000-0000-0000-0000-000000000002",
+        "make_model": "Ashok Leyland Dost+",
+        "registration_number": "MH01 BC 2290",
+        "capacity_kg": 1500.0
+      },
+      "trips": [
+        {
+          "trip_code": "TRP-8411",
+          "distance_km": 148.0,
+          "duration_minutes": 357,
+          "driving_score": 96.0,
+          "harsh_braking_events": 1,
+          "rapid_acceleration_events": 1,
+          "speeding_events": 0,
+          "sharp_cornering_events": 1,
+          "has_incident": false,
+          "handle_with_care": false,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 15.4
+        },
+        {
+          "trip_code": "TRP-8412",
+          "distance_km": 62.0,
+          "duration_minutes": 98,
+          "driving_score": 89.0,
+          "harsh_braking_events": 2,
+          "rapid_acceleration_events": 1,
+          "speeding_events": 1,
+          "sharp_cornering_events": 1,
+          "has_incident": false,
+          "handle_with_care": false,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 14.8
+        }
+      ]
+    },
+    {
+      "id": "d0000000-0000-0000-0000-000000000003",
+      "name": "Aman Verma",
+      "employee_code": "FL-EMP-0233",
+      "phone": "+91 98765 43212",
+      "city": "Pune",
+      "status": "on_trip",
+      "score": 87.0,
+      "rating": 4.65,
+      "total_trips_completed": 219,
+      "vehicle": {
+        "id": "02000000-0000-0000-0000-000000000003",
+        "make_model": "Mahindra Bolero Maxi Truck Plus",
+        "registration_number": "MH15 AD 7781",
+        "capacity_kg": 1200.0
+      },
+      "trips": [
+        {
+          "trip_code": "TRP-8421",
+          "distance_km": 38.4,
+          "duration_minutes": 134,
+          "driving_score": 82.0,
+          "harsh_braking_events": 3,
+          "rapid_acceleration_events": 2,
+          "speeding_events": 2,
+          "sharp_cornering_events": 1,
+          "has_incident": true,
+          "handle_with_care": false,
+          "is_on_time": false,
+          "fuel_efficiency_km_l": 13.2
+        }
+      ]
+    },
+    {
+      "id": "d0000000-0000-0000-0000-000000000004",
+      "name": "Priya Nair",
+      "employee_code": "FL-EMP-0234",
+      "phone": "+91 98765 43213",
+      "city": "Thane",
+      "status": "available",
+      "score": 94.0,
+      "rating": 4.88,
+      "total_trips_completed": 410,
+      "vehicle": {
+        "id": "02000000-0000-0000-0000-000000000004",
+        "make_model": "Tata Intra V30",
+        "registration_number": "MH04 GH 1120",
+        "capacity_kg": 1300.0
+      },
+      "trips": [
+        {
+          "trip_code": "TRP-8431",
+          "distance_km": 115.0,
+          "duration_minutes": 165,
+          "driving_score": 95.0,
+          "harsh_braking_events": 0,
+          "rapid_acceleration_events": 1,
+          "speeding_events": 0,
+          "sharp_cornering_events": 0,
+          "has_incident": false,
+          "handle_with_care": true,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 16.5
+        },
+        {
+          "trip_code": "TRP-8432",
+          "distance_km": 42.0,
+          "duration_minutes": 68,
+          "driving_score": 94.0,
+          "harsh_braking_events": 1,
+          "rapid_acceleration_events": 0,
+          "speeding_events": 0,
+          "sharp_cornering_events": 0,
+          "has_incident": false,
+          "handle_with_care": true,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 16.2
+        }
+      ]
+    },
+    {
+      "id": "d0000000-0000-0000-0000-000000000005",
+      "name": "Imran Sheikh",
+      "employee_code": "FL-EMP-0235",
+      "phone": "+91 98765 43214",
+      "city": "Pune",
+      "status": "off_duty",
+      "score": 82.0,
+      "rating": 4.42,
+      "total_trips_completed": 184,
+      "vehicle": {
+        "id": "02000000-0000-0000-0000-000000000005",
+        "make_model": "Eicher Pro 2049",
+        "registration_number": "MH12 QP 6612",
+        "capacity_kg": 2500.0
+      },
+      "trips": [
+        {
+          "trip_code": "TRP-8441",
+          "distance_km": 168.5,
+          "duration_minutes": 228,
+          "driving_score": 94.0,
+          "harsh_braking_events": 2,
+          "rapid_acceleration_events": 2,
+          "speeding_events": 1,
+          "sharp_cornering_events": 2,
+          "has_incident": false,
+          "handle_with_care": false,
+          "is_on_time": true,
+          "fuel_efficiency_km_l": 14.0
+        }
+      ]
+    }
+  ]
+}

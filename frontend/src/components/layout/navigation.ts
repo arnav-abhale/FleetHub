@@ -7,6 +7,7 @@ import {
   MapPin,
   PackagePlus,
   Route as RouteIcon,
+  Sparkles,
   Truck,
   Users,
 } from "lucide-react";
@@ -29,6 +30,7 @@ export const roleMeta: Record<Role, { title: string; person: string; initials: s
 export const navigation: Record<Role, NavItem[]> = {
   manager: [
     { label: "Fleet Report", to: "/manager", icon: Gauge, exact: true },
+    { label: "Driver Intelligence", to: "/manager/intelligence", icon: Sparkles },
     { label: "List of Deliveries", to: "/manager/deliveries", icon: Truck },
     { label: "Drivers", to: "/manager/drivers", icon: Users },
     { label: "Trip Reports", to: "/manager/trips", icon: RouteIcon },

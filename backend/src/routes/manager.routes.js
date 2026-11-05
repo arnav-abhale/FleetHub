@@ -41,4 +41,9 @@ router.delete('/drivers/:id', managerController.deleteDriver);
 router.get('/drivers/:driverId/performance', managerController.getDriverPerformance);
 router.get('/ai-recommendations', managerController.getAiRecommendations);
 
+// ML-Powered Driver Intelligence & Recommendation Engine
+router.get('/driver-intelligence', managerController.getFleetIntelligence);
+router.get('/drivers/:driverId/intelligence', managerController.getDriverIntelligence);
+router.post('/recommend-drivers', managerController.recommendDrivers);
+
 export default router;
