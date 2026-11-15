@@ -7,8 +7,19 @@ import errorMiddleware from './middleware/error.middleware.js';
 const app = express();
 
 // 1. CORS Configuration for cross-origin frontend requests with credentials
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'https://fleet-hub-amber.vercel.app',
+].filter(Boolean);
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || true,
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error(`CORS blocked origin: ${origin}`));
+    }
+  },
   credentials: true,
 }));
 

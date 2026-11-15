@@ -20,7 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
-# Editor directories and files
+# Vercel
+.vercel/
+
 .vscode/*
 !.vscode/extensions.json
 .idea
